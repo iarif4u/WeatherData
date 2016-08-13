@@ -1,11 +1,12 @@
 package com.example.mdarifur.weatherdata;
 
-import com.example.mdarifur.weatherdata.Conditionson.Condition;
-import com.example.mdarifur.weatherdata.model.ForecastTenday.ForecastTenday;
+import com.example.mdarifur.weatherdata.model.currentWeather.CurrentWeather;
+import com.example.mdarifur.weatherdata.model.forecast.Forecast;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 
 /**
@@ -13,9 +14,10 @@ import retrofit2.http.Path;
  */
 public interface API_Interface {
 
-    @GET("api/{apikey}/forecast10day/q/BD/{city}.json")
-    Call<ForecastTenday> getWeatherForecast(
-            @Path("apikey") String apikey,
-            @Path("city") String city);
+    @GET
+    Call<CurrentWeather> getCurrentWeather(@Url String url);
 
+
+    @GET
+    Call<Forecast> getForecastWeather(@Url String url);
 }

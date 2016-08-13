@@ -1,5 +1,5 @@
 
-package com.example.mdarifur.weatherdata.model.ForecastTenday;
+package com.example.mdarifur.weatherdata.model.forecast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,32 +8,11 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
-public class TxtForecast {
+public class Forecast_ {
 
-    @SerializedName("date")
-    @Expose
-    private String date;
     @SerializedName("forecastday")
     @Expose
     private List<Forecastday> forecastday = new ArrayList<Forecastday>();
-
-    /**
-     * 
-     * @return
-     *     The date
-     */
-    public String getDate() {
-        return date;
-    }
-
-    /**
-     * 
-     * @param date
-     *     The date
-     */
-    public void setDate(String date) {
-        this.date = date;
-    }
 
     /**
      * 
